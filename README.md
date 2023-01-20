@@ -17,8 +17,6 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 *Note for C4 wardens: Anything included in the C4udit output is considered a publicly known issue and is ineligible for awards.*
 
-[ ⭐️ SPONSORS ADD INFO HERE ]
-
 # Overview
 
 Numoen Core is a protocol for the permissionless creation of option-like leverage tokens called Power Tokens that are enabled by the borrowing and lending of automated market maker (AMM) shares. The protocol implements a capped power invariant, introduced in the paper `Replicating Monotonic Payoffs Without Oracles`, that allows lenders to provide two tokens to a pool of liquidity that always rebalances to a desired portfolio value via arbitrageurs. This portfolio value corresponds to a payoff that when inverted replicates the payoff of a power perpetual to some bound. Numoen Core achieves the power perpetual payoff through the AMM's LP shares that are lend out and used to mint Power Tokens. Borrowers provide collateral according to strict requirements and borrow the maximum amount of AMM shares from the pool. Funding rates are determined using the jump rate model with fixed parameters. The jump rate model is identical in structure to that of the Compound Protocol with changes made to the parameters so that it relates to the implied volitity of the LP share. Borrowers also pay interest by decreasing the overall size of their position and giving the collateral to lenders. Numoen allows for the permissionless creation of pairs using the factory model.
