@@ -147,6 +147,7 @@ For the Protocol Implementation, here's a brief description of each file.
 | periphery/SelfPermit.sol |
 | periphery/UniswapV3/PoolAddress.sol |
 | periphery/UniswapV3/TickMath.sol|
+| test/* |
 
 
 ## Scoping Details 
