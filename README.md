@@ -111,45 +111,43 @@ The `LendgineRouter` contract provides help when entering or exiting an option p
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
 
-The base directory is assumed to be `protocol` relative to the root of this repo.
-
 The following directories and implementations are considered in-scope for this audit.
 
-| Contract                        | Purpose                                     |
-| ------------------------------- | ------------------------------------------- |
-| src/core/\*\*                   | Implementation of the Protocol              |
-| src/libraries/\*\*              | Libraries used in the Protocol              |
-| src/periphery/\*\*              | Contracts for interacting with the Protocol |
 
 For the Protocol Implementation, here's a brief description of each file.
 
 | Contract              | SLOC | Purpose                                                   | Libraries used    |
 | --------------------- | ---- | --------------------------------------------------------- | ----------------- |
-| Pair.sol              | 81   | Creates AMM Pool (invariant)                              | `@openzeppelin/*` |
-| Lendgine.sol          | 139  | Backing Manager                                           | `@openzeppelin/*` |
-| Position.sol          | 50   | Liquidity Position Handler                                | `@openzeppelin/*` |
-| PositionMath.sol      | 7    | Math for LP Positions                                     | `@openzeppelin/*` |
-| ImmutableState.sol    | 19   | Immutables                                                | `@openzeppelin/*` |
-| Factory.sol           | 40   | Deployer                                                  | `@openzeppelin/*` |
-| JumpRate.sol          | 26   | Interest Rate Curve                                       | `@openzeppelin/*` |
-| Balance.sol           | 8    | Position Balance                                          | `@openzeppelin/*` |
-| SafeCast.sol          | 7    | Cast Solidity Types                                       | `@openzeppelin/*` |
-| LendgineRouter.sol    | 221  | Interact with LP Positions                                | `@openzeppelin/*` |
-| LiquidityManager.sol  | 168  | Manages LP Positions                                      | `@openzeppelin/*` |
-| Payment.sol           | 32   | Send and Recieve Tokens                                   | `@openzeppelin/*` |
-| SwapHelper.sol        | 63   | Allows for Swapping                                       | `@openzeppelin/*` |
-| LendgineAddress.sol   | 23   | Position Addresses                                        | `@openzeppelin/*` |
-| UniswapV2Library.sol  | 46   | Modified V2 Library                                       | `@openzeppelin/*` |
+| Pair.sol              | 81   | Implements AMM with Capped Power Invariant                |  |
+| Lendgine.sol          | 139  | Lending and borrowing of AMM shares                       |  |
+| Position.sol          | 50   | Liquidity position handler                                |  |
+| PositionMath.sol      | 7    | Math for liquidity positions                              |  |
+| ImmutableState.sol    | 19   | Immutables                                                |  |
+| Factory.sol           | 40   | Deploys lendgine markets                                  |  |
+| JumpRate.sol          | 26   | Interest rate curve                                       |  |
+| Balance.sol           | 8    | Reads token balances                                      |  |
+| SafeCast.sol          | 7    | Cast Solidity types                                       |  |
+| LendgineRouter.sol    | 221  | Aids with entry and exit of options positions             |  |
+| LiquidityManager.sol  | 168  | Aids with entry, exit, and management of liquidity positions |  |
+| Payment.sol           | 32   | Functions to ease deposit and withdrawal of ETH           |  |
+| SwapHelper.sol        | 63   | Facilitates swapping on external liquidity sources        |  |
+| LendgineAddress.sol   | 23   | Computes Numoen Lendgine addresses                        |  |
+| UniswapV2Library.sol  | 46   | Modified V2 Library for Solidity 0.8                      |  |
 
-*For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
-
-| Contract | SLOC | Purpose | Libraries used |  
-| ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+| Contract              |
+| --------------------- |
+| core/ReentrancyGaurd.sol |
+| core/ERC20.sol |
+| libraries/SafeTransferLib.sol |
+| libraries/FullMath.sol |
+| periphery/Multicall.sol |
+| periphery/SelfPermit.sol |
+| periphery/UniswapV3/PoolAddress.sol |
+| periphery/UniswapV3/TickMath.sol|
+
 
 ## Scoping Details 
 ```
