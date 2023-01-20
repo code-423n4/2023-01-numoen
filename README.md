@@ -69,11 +69,45 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+Numoen is a permissionless options protocol for creating leverage tokens that is enabled by the borrowing and lending of automated market maker shares. Lenders provider liquidity to the capped power invariant, introduced in the paper `Replicating Monotonic Payoffs Without Oracles`, and lend their shares of the AMM to a lending pool. Borrowers provide collateral according to strict requirements and borrow the maximum amount of AMM shares from the pool which results in a payoff that replicated a power perpetual up to some bound. Funding rates are determined using the jump rate model with fixed parameters. Borrowers pay interest by decreasing the overall size of their position and giving the collateral to lenders. Numoen allows for the permissionless creation of pairs using the factory model.
 
-Numoen Core implements a custom invariant for replicating a "Capped Power" payoff first described in the Replicating Market Makers paper authored by Angeris. The power invariant guarantees the assets pooled within the Automated Market Maker (AMM) rebalance to a desired portfolio value via arbitrageurs. This portfolio value corresponds to a payoff that replicates a power perpetual instrument if inverted. In other words, when an LP provisions liqudity, this liquidity is atomatically lend out, inverting the payoff, and thereby minting a Power Perpetual Token.
+Numoen has docs but most information retaining to smart contracts in the documentation is not relevant because the codebase undergoing the contest is updated from the beta version of the contracts to be more robust and efficient. However the explanation of the core mechanism is still relevant.
 
-Power Invariant: k = x - ((p_1)^2 - (1/2) * y)^2
+## Protocol functionality overview
+
+### Factory
+
+A new instance of a market is created using the factory. Token1 is the speculative token and token0 is the base token or numeraire. The upper bound is the price at which the AMM underlying consists of entirely token0 or the option loses convexity. Token scales are meant to be decimals.
+
+### Pair
+
+Liquidity providers provide liquidity to an AMM with a custom invariant. The invariant is documented in the function `invariant` in `Pair.sol`. The typical `Mint`, `Burn`, and `Swap` functions are implemented. Swap is externally exposed so that accounts can swap between the underlying tokens of the pool with any trade that upholds the invariant. Callbacks are used to allow for flash swaps. Mint is not externally exposed and is called by a higher level function in `Lendgine.sol`. Mint also uses callbacks to receive the tokens that are deposited which enables liquidity to be minted before supplying the underlying tokens. Mint checks that the deposited tokens in addition to the requested liquidity still satisfies the invariant or else reverts. Burn removes liquidity and transfers the underlying tokens to the recipient, while performing an extra, potentially unnecessary, check that the invariant is satisfied after the outputs are removed.
+
+### Providing Liquidity
+
+Liquidity positions are recorded with a size, tokensOwed, and rewardPerPositionPaid in `Position.sol`. This is the same algorithm used by Synthetix `StakingRewards.sol`. Size is a different unit than shares of the AMM where size accounts for the dilution that liquidity providers undergo, explained further in the interest section. Liquidity is provided through the `deposit` function in `Lendgine.sol`, which calculated the size of the liquidity, updates the position struct, and called the underlying `mint` function in `Pair.sol`. Withdraw performs the opposite function, calculating how many shares of the AMM are proportional to the size of the position being withdrawn, updating the position struct, and calls the underlying `burn` function in `Pair.sol`.
+
+### Borrowing 
+
+Options positions are created by using token1 as collateral to borrow AMM shares. Our invariant has the special property that underlying composition can be entirely token1 without needing an infinite amount of token0. This is similar to a bounded UniswapV3 position but dissimilar from UniswapV2. This means that we can determine an amount of token1 such that the value of that amount is greater than the value an AMM share, no matter the exchange rate of the two underlying tokens. Thus, under collateralization is not possible with the correct amount of collateral. The `mint` function determines how many AMM shares are to be borrowed for the specified amount of collateral and then calls the underlying `burn` function in `Pair.sol` to remove the borrowed liquidity. The collateral is passed in through a callback function, which allows for liquidity to be optimistically borrowed, then paid for. Again, the size of the position is not directly proportional to the amount of liquidity being borrowed, so the amount of shares that a minter receives must be calculated. Options shares are minted as an ERC20. representing collateral in token1 and debt in AMM shares. Option shares can be burned by transferring them to the `Lendgine.sol` contract first, calculating the amount of liquidity owed, then calling the `mint` function in `Pair.sol` to payback the AMM share debt owed  and unlock the collateral of the position.
+
+### Interest
+
+Interest is accrued from options holders to liquidity providers in the form of token1. The jump rate model is used to determine the interest rate. When interest is accrued, the amount of AMM shares and speculative tokens that are removed from options holders is determined. The collateral and debt of the options holders simultaneously. The debt of options holders is forgiven, meaning that liquidity providers are not expecting to be repaid. This is why the size of a liquidity position is not equivalent to the AMM shares that originally were deposited. To makeup for slowly decreasing amount of AMM shares liquidity providers have, the collateral from the options holders that is to be removed is given to the liquidity providers.
+
+In other terms, liquidity providers are slowly exchanging their liquidity for the collateral of options holders (liquidity borrowers). An option position is gradually over time worth less and less because it represents a claim to a smaller pool of collateral and debt. A liquidity provider position is gradually over time worth less and less because it represents a claim to a smaller pool of AMM shares but this is made up because over time it is rewarded with token1 from the collateral of options holders.
+
+There is a special case when all liquidity currently borrowed is accrued at once. As long as liquidity is accrued somewhat frequently this should not happen. When this does happen, all options positions are worth nothing and all liquidity positions are worth only the token1 that is owed to it. There are special checks in the `mint` and `deposit` function in `Lendgine.sol` that disable opening new options or liquidity positions because the amount to be rewards is not able to be determined. The market is effectively done at this point in time and would require a redeployment to be restarted from scratch.
+
+### Liquidity Manager
+
+The `LiquidityManager` contract provides some helpers to aid with entering, exiting, and managing a liquidity provider position in Numoen. This adds checks for stale transactions, slippage, handling permit functions and native tokens.
+
+### Lendgine Router
+
+The `LendgineRouter` contract provides help when entering or exiting an option position. Checks for staleness, slippage, handling permit functions, and native tokens are included. This can also perform the leveraging and deleveraging of options positions with the help of external liquidity pools such as UniswapV2 style pools and UniswapV3 style pools. This is somewhat similar to looping through compound while trading the borrowed token for collateral and then borrowing more. `mint` takes the borrowed liquidity and transfers it entirely into token1 for collateral. A borrowed amount can be passed in such that liquidity can be optimistically borrowed for more collateral than the option depositor has at the moment, the underlying liquidity is then swapped entirely for token1 to use as collateral in combination with collateral from the user. `burn` optimistically mints a liquidity position and repays debt, then uses the unlocked collateral to come up with the underlying for the liquidity position that was minted. 
+![image](https://user-images.githubusercontent.com/43524469/213795959-ec3c1652-db07-4ec4-9fe8-a4e46e5ac60b.png)
+
 
 # Scope
 
