@@ -1,17 +1,3 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted (shared with you after the contest) 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
 # Repo setup
 
 ## ⭐️ Sponsor: Add code to this repo
@@ -116,23 +102,23 @@ The following directories and implementations are considered in-scope for this a
 
 For the Protocol Implementation, here's a brief description of each file.
 
-| Contract              | SLOC | Purpose                                                   | Libraries used    |
-| --------------------- | ---- | --------------------------------------------------------- | ----------------- |
-| Pair.sol              | 81   | Implements AMM with Capped Power Invariant                |  |
-| Lendgine.sol          | 139  | Lending and borrowing of AMM shares                       |  |
-| Position.sol          | 50   | Liquidity position handler                                |  |
-| PositionMath.sol      | 7    | Math for liquidity positions                              |  |
-| ImmutableState.sol    | 19   | Immutables                                                |  |
-| Factory.sol           | 40   | Deploys lendgine markets                                  |  |
-| JumpRate.sol          | 26   | Interest rate curve                                       |  |
-| Balance.sol           | 8    | Reads token balances                                      |  |
-| SafeCast.sol          | 7    | Cast Solidity types                                       |  |
-| LendgineRouter.sol    | 221  | Aids with entry and exit of options positions             |  |
-| LiquidityManager.sol  | 168  | Aids with entry, exit, and management of liquidity positions |  |
-| Payment.sol           | 32   | Functions to ease deposit and withdrawal of ETH           |  |
-| SwapHelper.sol        | 63   | Facilitates swapping on external liquidity sources        |  |
-| LendgineAddress.sol   | 23   | Computes Numoen Lendgine addresses                        |  |
-| UniswapV2Library.sol  | 46   | Modified V2 Library for Solidity 0.8                      |  |
+| Contract              | SLOC | Purpose                                                      | Libraries Used    |
+| --------------------- | ---- | ---------------------------------------------------------    | ----------------- |
+| Pair.sol              | 81   | Implements AMM with Capped Power Invariant                   |      N/A          |
+| Lendgine.sol          | 139  | Lending and borrowing of AMM shares                          |      N/A          |
+| Position.sol          | 50   | Liquidity position handler                                   |      N/A          |
+| PositionMath.sol      | 7    | Math for liquidity positions                                 |      N/A          |
+| ImmutableState.sol    | 19   | Immutables                                                   |      N/A          |
+| Factory.sol           | 40   | Deploys lendgine markets                                     |      N/A          |
+| JumpRate.sol          | 26   | Interest rate curve                                          |      N/A          |
+| Balance.sol           | 8    | Reads token balances                                         |      N/A          |
+| SafeCast.sol          | 7    | Cast Solidity types                                          |      N/A          |
+| LendgineRouter.sol    | 221  | Aids with entry and exit of options positions                |      N/A          |
+| LiquidityManager.sol  | 168  | Aids with entry, exit, and management of liquidity positions |      N/A          |
+| Payment.sol           | 32   | Functions to ease deposit and withdrawal of ETH              |      N/A          |
+| SwapHelper.sol        | 63   | Facilitates swapping on external liquidity sources           |      N/A          |
+| LendgineAddress.sol   | 23   | Computes Numoen Lendgine addresses                           |      N/A          |
+| UniswapV2Library.sol  | 46   | Modified V2 Library for Solidity 0.8                         |      N/A          |
 
 
 ## Out of scope
