@@ -176,6 +176,15 @@ For the Protocol Implementation, here's a brief description of each file.
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+Astaria runs on [Foundry](https://github.com/foundry-rs/foundry). If you don't have it installed, follow the installation instructions [here](https://book.getfoundry.sh/getting-started/installation).
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+To install contract dependencies, run:
+
+```sh
+forge install
+yarn
+```
+
+Some tests are reliant upon a fork of goerli. Add the goerli RPC to a .env file. See .env.example for an example. To run tests, run:
+
+`forge test --gas-report`
