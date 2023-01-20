@@ -71,9 +71,43 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 *Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
 
+Numoen Core implements a custom invariant for replicating a "Capped Power" payoff first described in the Replicating Market Makers paper authored by Angeris. The power invariant guarantees the assets pooled within the Automated Market Maker (AMM) rebalance to a desired portfolio value via arbitrageurs. This portfolio value corresponds to a payoff that replicates a power perpetual instrument if inverted. In other words, when an LP provisions liqudity, this liquidity is atomatically lend out, inverting the payoff, and thereby minting a Power Perpetual Token.
+
+Power Invariant: k = x - ((p_1)^2 - (1/2) * y)^2
+
 # Scope
 
 *List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
+
+The base directory is assumed to be `protocol` relative to the root of this repo.
+
+The following directories and implementations are considered in-scope for this audit.
+
+| Contract                        | Purpose                                     |
+| ------------------------------- | ------------------------------------------- |
+| src/core/\*\*                   | Implementation of the Protocol              |
+| src/libraries/\*\*              | Libraries used in the Protocol              |
+| src/periphery/\*\*              | Contracts for interacting with the Protocol |
+
+For the Protocol Implementation, here's a brief description of each file.
+
+| Contract              | SLOC | Purpose                                                   | Libraries used    |
+| --------------------- | ---- | --------------------------------------------------------- | ----------------- |
+| Pair.sol              | 81   | Creates AMM Pool (invariant)                              | `@openzeppelin/*` |
+| Lendgine.sol          | 139  | Backing Manager                                           | `@openzeppelin/*` |
+| Position.sol          | 50   | Liquidity Position Handler                                | `@openzeppelin/*` |
+| PositionMath.sol      | 7    | Math for LP Positions                                     | `@openzeppelin/*` |
+| ImmutableState.sol    | 19   | Immutables                                                | `@openzeppelin/*` |
+| Factory.sol           | 40   | Deployer                                                  | `@openzeppelin/*` |
+| JumpRate.sol          | 26   | Interest Rate Curve                                       | `@openzeppelin/*` |
+| Balance.sol           | 8    | Position Balance                                          | `@openzeppelin/*` |
+| SafeCast.sol          | 7    | Cast Solidity Types                                       | `@openzeppelin/*` |
+| LendgineRouter.sol    | 221  | Interact with LP Positions                                | `@openzeppelin/*` |
+| LiquidityManager.sol  | 168  | Manages LP Positions                                      | `@openzeppelin/*` |
+| Payment.sol           | 32   | Send and Recieve Tokens                                   | `@openzeppelin/*` |
+| SwapHelper.sol        | 63   | Allows for Swapping                                       | `@openzeppelin/*` |
+| LendgineAddress.sol   | 23   | Position Addresses                                        | `@openzeppelin/*` |
+| UniswapV2Library.sol  | 46   | Modified V2 Library                                       | `@openzeppelin/*` |
 
 *For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
 
@@ -84,12 +118,6 @@ The C4audit output for the contest can be found [here](add link to report) withi
 ## Out of scope
 
 *List any files/contracts that are out of scope for this audit.*
-
-# Additional Context
-
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
-
-*Sponsor, please confirm/edit the information below.*
 
 ## Scoping Details 
 ```
