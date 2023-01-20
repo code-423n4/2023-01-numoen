@@ -1,51 +1,3 @@
-# ✨ So you want to sponsor a contest
-
-This `README.md` contains a set of checklists for our contest collaboration.
-
-Your contest will use two repos: 
-- **a _contest_ repo** (this one), which is used for scoping your contest and for providing information to contestants (wardens)
-- **a _findings_ repo**, where issues are submitted (shared with you after the contest) 
-
-Ultimately, when we launch the contest, this contest repo will be made public and will contain the smart contracts to be reviewed and all the information needed for contest participants. The findings repo will be made public after the contest report is published and your team has mitigated the identified issues.
-
-Some of the checklists in this doc are for **C4 (🐺)** and some of them are for **you as the contest sponsor (⭐️)**.
-
----
-
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [ ] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [ ] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [ ] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to contest start time.**
-- [ ] Be prepared for a 🚨code freeze🚨 for the duration of the contest — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the contest. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [ ] Under the "Scope" heading, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
----
-
 # Numoen contest details
 - Total Prize Pool: $60,500 USDC
   - HM awards: $42,500 USDC 
@@ -69,27 +21,84 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Overview
 
-*Please provide some context about the code being audited, and identify any areas of specific concern in reviewing the code. (This is a good place to link to your docs, if you have them.)*
+Numoen Core is a protocol for the permissionless creation of option-like leverage tokens called Power Tokens that are enabled by the borrowing and lending of automated market maker (AMM) shares. The protocol implements a capped power invariant, introduced in the paper `Replicating Monotonic Payoffs Without Oracles`, that allows lenders to provide two tokens to a pool of liquidity that always rebalances to a desired portfolio value via arbitrageurs. This portfolio value corresponds to a payoff that when inverted replicates the payoff of a power perpetual to some bound. Numoen Core achieves the power perpetual payoff through the AMM's LP shares that are lend out and used to mint Power Tokens. Borrowers provide collateral according to strict requirements and borrow the maximum amount of AMM shares from the pool. Funding rates are determined using the jump rate model with fixed parameters. The jump rate model is identical in structure to that of the Compound Protocol with changes made to the parameters so that it relates to the implied volitity of the LP share. Borrowers also pay interest by decreasing the overall size of their position and giving the collateral to lenders. Numoen allows for the permissionless creation of pairs using the factory model.
+
+Numoen has [docs](https://numoen.gitbook.io/numoen/) but most information pertaining to the smart contracts are not relevant as the codebase documented is outdated. The newer version that is being audited through this contest is more robust and efficient. Therefore documentation on the smart contracts are most accurate here.
+
+## Protocol functionality overview
+
+### Factory
+
+A new instance of a market is created using the factory. Token1 is the speculative token and token0 is the base token. The upper bound is the price at which the Power Token only holds the base token (token0) and the Power Token no longer has convexity. Token scales are meant to be decimals.
+
+### Pair
+
+Liquidity providers provide liquidity to an AMM with a custom invariant. The invariant is documented in the function `invariant` in `Pair.sol`. The typical `Mint`, `Burn`, and `Swap` functions are implemented. Swap is externally exposed so that accounts can swap between the underlying tokens of the pool with any trade that upholds the invariant. Callbacks are used to allow for flash swaps. Mint is not externally exposed and is called by a higher level function in `Lendgine.sol`. Mint also uses callbacks to receive the tokens that are deposited which enables liquidity to be minted before supplying the underlying tokens. Mint checks that the deposited tokens in addition to the requested liquidity still satisfies the invariant or else reverts. Burn removes liquidity and transfers the underlying tokens to the recipient, while performing an extra, potentially unnecessary, check that the invariant is satisfied after the outputs are removed.
+
+### Providing Liquidity
+
+Liquidity positions are recorded with a size, tokensOwed, and rewardPerPositionPaid in `Position.sol`. This is the same algorithm used by Synthetix `StakingRewards.sol`. Size is a different unit than shares of the AMM because size accounts for the dilution that liquidity providers undergo, explained further in the interest section. Liquidity is provided through the `deposit` function in `Lendgine.sol`, which calculates the size of the liquidity, updates the position struct, and calles the underlying `mint` function in `Pair.sol`. Withdraw performs the opposite function, calculating how many shares of the AMM are proportional to the size of the position being withdrawn, updating the position struct, and calls the underlying `burn` function in `Pair.sol`.
+
+### Borrowing
+
+Power Tokens are created by using token1 as collateral to borrow LP shares. Our invariant has the special property that underlying composition can be entirely token1 without needing an infinite amount of token0. This is similar to a bounded UniswapV3 position but dissimilar from UniswapV2. This means that we can determine an amount of token1 such that the value of that amount is greater than the value a LP share, no matter the exchange rate of the two underlying tokens. Thus, under collateralization is not possible with the correct amount of collateral. The `mint` function determines how many LP shares are to be borrowed for the specified amount of collateral and then calls the underlying `burn` function in `Pair.sol` to remove the borrowed liquidity. The collateral is passed in through a callback function, which allows for liquidity to be optimistically borrowed, then paid for. Again, the size of the position is not directly proportional to the amount of liquidity being borrowed, so the amount of shares that a minter receives must be calculated. Power Tokens are minted as an ERC20 representing collateral in token1 and debt in LP shares. Power Tokens can be burned by transferring them to the `Lendgine.sol` contract first, calculating the amount of liquidity owed, then calling the `mint` function in `Pair.sol` to payback the LP share debt owed and unlock the collateral of the position.
+
+### Interest
+
+
+The jump rate model is used to determine the interest rate. Interest is accrued from Power Token holders to liquidity providers in the form of token1. When interest is accrued, the amount of LP shares and speculative tokens that should be removed from Power Token holders is determined. The collateral and debt of the options holders are decreased simultaneously. The debt of Power Token holders is forgiven, meaning that liquidity providers are not expecting to be repaid. This is why the size of a liquidity position is not equivalent to the LP shares that originally were deposited. To makeup for slowly decreasing amount of LP shares, liquidity providers are given the collateral removed from the Power Token holders.
+
+In other terms, liquidity providers are slowly exchanging their liquidity for the collateral of Power Token holders. A Power Token position is gradually worth less and less because it represents a claim to a smaller pool of collateral and debt. A liquidity provider position is gradually worth less and less because it represents a claim to a smaller pool of AMM shares but this is made up because over time it is rewarded with token1 from the collateral of Power Token holders.
+
+There is a special case when all liquidity currently borrowed is accrued at once. As long as liquidity is accrued somewhat frequently this should not happen. When this does happen, all Power Token positions are worth nothing and all LP positions are worth only the token1 that is owed to it. There are special checks in the `mint` and `deposit` function in `Lendgine.sol` that disable opening new Power Tokens or LP positions because the amount to be rewards is not able to be determined. The market is effectively done at this point in time and would require a redeployment to be restarted from scratch.
+
+### Liquidity Manager
+
+The `LiquidityManager` contract provides some helpers to aid with entering, exiting, and managing a LP position in Numoen. This adds checks for stale transactions, slippage, handling permit functions and native tokens.
+
+### Lendgine Router
+
+The `LendgineRouter` contract provides help when entering or exiting an option position. Checks for staleness, slippage, handling permit functions, and native tokens are included. This can also perform the leveraging and deleveraging of Power Token positions with the help of external liquidity pools such as UniswapV2 style pools and UniswapV3 style pools. This is somewhat similar to looping through compound while trading the borrowed token for collateral and then borrowing more. `mint` takes the borrowed liquidity and transfers it entirely into token1 for collateral. A borrowed amount can be passed in such that liquidity can be optimistically borrowed for more collateral than the option depositor has at the moment, the underlying liquidity is then swapped entirely for token1 to use as collateral in combination with collateral from the user. `burn` optimistically mints a liquidity position and repays debt, then uses the unlocked collateral to come up with the underlying for the liquidity position that was minted.
 
 # Scope
 
-*List all files in scope in the table below (along with hyperlinks) -- and feel free to add notes here to emphasize areas of focus.*
+The following directories and implementations are considered in-scope for this audit.
 
-*For line of code counts, we recommend using [cloc](https://github.com/AlDanial/cloc).* 
+For the Protocol Implementation, here's a brief description of each file.
 
-| Contract | SLOC | Purpose | Libraries used |  
-| ----------- | ----------- | ----------- | ----------- |
-| [contracts/folder/sample.sol](contracts/folder/sample.sol) | 123 | This contract does XYZ | [`@openzeppelin/*`](https://openzeppelin.com/contracts/) |
+| Contract              | SLOC | Purpose                                                      | Libraries Used    |
+| --------------------- | ---- | ---------------------------------------------------------    | ----------------- |
+| Pair.sol              | 81   | Implements AMM with Capped Power Invariant                   |      N/A          |
+| Lendgine.sol          | 139  | Lending and borrowing of AMM shares                          |      N/A          |
+| Position.sol          | 50   | Liquidity position handler                                   |      N/A          |
+| PositionMath.sol      | 7    | Math for liquidity positions                                 |      N/A          |
+| ImmutableState.sol    | 19   | Immutables                                                   |      N/A          |
+| Factory.sol           | 40   | Deploys lendgine markets                                     |      N/A          |
+| JumpRate.sol          | 26   | Interest rate curve                                          |      N/A          |
+| Balance.sol           | 8    | Reads token balances                                         |      N/A          |
+| SafeCast.sol          | 7    | Cast Solidity types                                          |      N/A          |
+| LendgineRouter.sol    | 221  | Aids with entry and exit of options positions                |      N/A          |
+| LiquidityManager.sol  | 168  | Aids with entry, exit, and management of liquidity positions |      N/A          |
+| Payment.sol           | 32   | Functions to ease deposit and withdrawal of ETH              |      N/A          |
+| SwapHelper.sol        | 63   | Facilitates swapping on external liquidity sources           |      N/A          |
+| LendgineAddress.sol   | 23   | Computes Numoen Lendgine addresses                           |      N/A          |
+| UniswapV2Library.sol  | 46   | Modified V2 Library for Solidity 0.8                         |      N/A          |
+
 
 ## Out of scope
 
-*List any files/contracts that are out of scope for this audit.*
+| Contract              |
+| --------------------- |
+| core/ReentrancyGaurd.sol |
+| core/ERC20.sol |
+| libraries/SafeTransferLib.sol |
+| libraries/FullMath.sol |
+| periphery/Multicall.sol |
+| periphery/SelfPermit.sol |
+| periphery/UniswapV3/PoolAddress.sol |
+| periphery/UniswapV3/TickMath.sol|
+| test/* |
 
-# Additional Context
-
-*Describe any novel or unique curve logic or mathematical models implemented in the contracts*
-
-*Sponsor, please confirm/edit the information below.*
 
 ## Scoping Details 
 ```
@@ -117,6 +126,15 @@ The C4audit output for the contest can be found [here](add link to report) withi
 
 # Tests
 
-*Provide every step required to build the project from a fresh git clone, as well as steps to run the tests with a gas report.* 
+Numoen runs on [Foundry](https://github.com/foundry-rs/foundry). If you don't have it installed, follow the installation instructions [here](https://book.getfoundry.sh/getting-started/installation).
 
-*Note: Many wardens run Slither as a first pass for testing.  Please document any known errors with no workaround.* 
+To install contract dependencies, run:
+
+```sh
+forge install
+yarn
+```
+
+Some tests are reliant upon a fork of goerli. Add the goerli RPC to a .env file. See .env.example for an example. To run tests, run:
+
+`forge test --gas-report`

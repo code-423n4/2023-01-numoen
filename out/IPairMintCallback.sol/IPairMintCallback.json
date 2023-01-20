@@ -1,0 +1,251 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "liquidity",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "pairMintCallback",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "pairMintCallback(uint256,bytes)": "ef4ae61c"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"liquidity\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"pairMintCallback\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"pairMintCallback(uint256,bytes)\":{\"details\":\"In the implementation you must pay the pool tokens owed for the mint. The caller of this method must be checked to be a Pair deployed by the canonical Factory.\",\"params\":{\"data\":\"Any data passed through by the caller via the Mint call\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"pairMintCallback(uint256,bytes)\":{\"notice\":\"Called to `msg.sender` after executing a mint via Pair\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/core/interfaces/callback/IPairMintCallback.sol\":\"IPairMintCallback\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@prb/test/=lib/prb-test/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":prb-math/=lib/prb-math/contracts/\",\":src/=src/\"]},\"sources\":{\"src/core/interfaces/callback/IPairMintCallback.sol\":{\"keccak256\":\"0xf1bfc4cd077e48c593ffdc82a8c58d134244396f57278f626a6db75d3df2e3df\",\"license\":\"GPL-2.0-or-later\",\"urls\":[\"bzz-raw://9a5b9c146d0651d25d1222d1d41e1e7759a01af36f7b413a77da139bf6929f84\",\"dweb:/ipfs/QmTSiRTFhw4aPaNahXE5BxWh4gjaUn8ZC3qwpc2z1Wjm9f\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "liquidity",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "pairMintCallback"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "pairMintCallback(uint256,bytes)": {
+            "details": "In the implementation you must pay the pool tokens owed for the mint. The caller of this method must be checked to be a Pair deployed by the canonical Factory.",
+            "params": {
+              "data": "Any data passed through by the caller via the Mint call"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "pairMintCallback(uint256,bytes)": {
+            "notice": "Called to `msg.sender` after executing a mint via Pair"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@prb/test/=lib/prb-test/src/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":prb-math/=lib/prb-math/contracts/",
+        ":src/=src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/core/interfaces/callback/IPairMintCallback.sol": "IPairMintCallback"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/core/interfaces/callback/IPairMintCallback.sol": {
+        "keccak256": "0xf1bfc4cd077e48c593ffdc82a8c58d134244396f57278f626a6db75d3df2e3df",
+        "urls": [
+          "bzz-raw://9a5b9c146d0651d25d1222d1d41e1e7759a01af36f7b413a77da139bf6929f84",
+          "dweb:/ipfs/QmTSiRTFhw4aPaNahXE5BxWh4gjaUn8ZC3qwpc2z1Wjm9f"
+        ],
+        "license": "GPL-2.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/core/interfaces/callback/IPairMintCallback.sol",
+    "id": 28058,
+    "exportedSymbols": {
+      "IPairMintCallback": [
+        28057
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "45:456:27",
+    "nodes": [
+      {
+        "id": 28048,
+        "nodeType": "PragmaDirective",
+        "src": "45:24:27",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 28057,
+        "nodeType": "ContractDefinition",
+        "src": "71:429:27",
+        "nodes": [
+          {
+            "id": 28056,
+            "nodeType": "FunctionDefinition",
+            "src": "423:75:27",
+            "nodes": [],
+            "documentation": {
+              "id": 28049,
+              "nodeType": "StructuredDocumentation",
+              "src": "103:317:27",
+              "text": "@notice Called to `msg.sender` after executing a mint via Pair\n @dev In the implementation you must pay the pool tokens owed for the mint.\n The caller of this method must be checked to be a Pair deployed by the canonical Factory.\n @param data Any data passed through by the caller via the Mint call"
+            },
+            "functionSelector": "ef4ae61c",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pairMintCallback",
+            "nameLocation": "432:16:27",
+            "parameters": {
+              "id": 28054,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 28051,
+                  "mutability": "mutable",
+                  "name": "liquidity",
+                  "nameLocation": "457:9:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28056,
+                  "src": "449:17:27",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 28050,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "449:7:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 28053,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "483:4:27",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 28056,
+                  "src": "468:19:27",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 28052,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "468:5:27",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "448:40:27"
+            },
+            "returnParameters": {
+              "id": 28055,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "497:0:27"
+            },
+            "scope": 28057,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPairMintCallback",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          28057
+        ],
+        "name": "IPairMintCallback",
+        "nameLocation": "81:17:27",
+        "scope": 28058,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-2.0-or-later"
+  },
+  "id": 27
+}

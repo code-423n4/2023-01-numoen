@@ -1,0 +1,677 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "factory",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token0Scale",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "token1Scale",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "upperBound",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "factory()": "c45a0155",
+    "token0()": "0dfe1681",
+    "token0Scale()": "b8c1a35f",
+    "token1()": "d21220a7",
+    "token1Scale()": "70f98d84",
+    "upperBound()": "b09ad8a0"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"factory\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token0Scale\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"token1Scale\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"upperBound\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Kyle Scott (kyle@numoen.com)\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"factory()\":{\"notice\":\"The contract that deployed the lendgine\"},\"token0()\":{\"notice\":\"The \\\"numeraire\\\" or \\\"base\\\" token in the pair\"},\"token0Scale()\":{\"notice\":\"Scale required to make token 0 18 decimals\"},\"token1()\":{\"notice\":\"The \\\"risky\\\" or \\\"speculative\\\" token in the pair\"},\"token1Scale()\":{\"notice\":\"Scale required to make token 1 18 decimals\"},\"upperBound()\":{\"notice\":\"Maximum exchange rate (token0/token1)\"}},\"notice\":\"Immutable state interface\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/core/interfaces/IImmutableState.sol\":\"IImmutableState\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@prb/test/=lib/prb-test/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":prb-math/=lib/prb-math/contracts/\",\":src/=src/\"]},\"sources\":{\"src/core/interfaces/IImmutableState.sol\":{\"keccak256\":\"0xe41d3e449c3856bbf4c3e2484f5673c5e785e5f4675a0c713454230955525c00\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://a0945833ee811a2dbadec4ae6db0124b391f006b1ffec6788980f47d464f8e33\",\"dweb:/ipfs/QmaxvzrxNbiY5b2mDrbU2m8U9WHXSrjdBm3ExjusxQ3irc\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "factory",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token0",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token0Scale",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token1",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "token1Scale",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "upperBound",
+          "outputs": [
+            {
+              "internalType": "uint256",
+              "name": "",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "factory()": {
+            "notice": "The contract that deployed the lendgine"
+          },
+          "token0()": {
+            "notice": "The \"numeraire\" or \"base\" token in the pair"
+          },
+          "token0Scale()": {
+            "notice": "Scale required to make token 0 18 decimals"
+          },
+          "token1()": {
+            "notice": "The \"risky\" or \"speculative\" token in the pair"
+          },
+          "token1Scale()": {
+            "notice": "Scale required to make token 1 18 decimals"
+          },
+          "upperBound()": {
+            "notice": "Maximum exchange rate (token0/token1)"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@prb/test/=lib/prb-test/src/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":prb-math/=lib/prb-math/contracts/",
+        ":src/=src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/core/interfaces/IImmutableState.sol": "IImmutableState"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/core/interfaces/IImmutableState.sol": {
+        "keccak256": "0xe41d3e449c3856bbf4c3e2484f5673c5e785e5f4675a0c713454230955525c00",
+        "urls": [
+          "bzz-raw://a0945833ee811a2dbadec4ae6db0124b391f006b1ffec6788980f47d464f8e33",
+          "dweb:/ipfs/QmaxvzrxNbiY5b2mDrbU2m8U9WHXSrjdBm3ExjusxQ3irc"
+        ],
+        "license": "GPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/core/interfaces/IImmutableState.sol",
+    "id": 27801,
+    "exportedSymbols": {
+      "IImmutableState": [
+        27800
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "41:812:22",
+    "nodes": [
+      {
+        "id": 27762,
+        "nodeType": "PragmaDirective",
+        "src": "41:24:22",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 27800,
+        "nodeType": "ContractDefinition",
+        "src": "146:706:22",
+        "nodes": [
+          {
+            "id": 27769,
+            "nodeType": "FunctionDefinition",
+            "src": "230:51:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27764,
+              "nodeType": "StructuredDocumentation",
+              "src": "176:51:22",
+              "text": "@notice The contract that deployed the lendgine"
+            },
+            "functionSelector": "c45a0155",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "factory",
+            "nameLocation": "239:7:22",
+            "parameters": {
+              "id": 27765,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "246:2:22"
+            },
+            "returnParameters": {
+              "id": 27768,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27767,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27769,
+                  "src": "272:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27766,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "272:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "271:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27775,
+            "nodeType": "FunctionDefinition",
+            "src": "343:50:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27770,
+              "nodeType": "StructuredDocumentation",
+              "src": "285:55:22",
+              "text": "@notice The \"numeraire\" or \"base\" token in the pair"
+            },
+            "functionSelector": "0dfe1681",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token0",
+            "nameLocation": "352:6:22",
+            "parameters": {
+              "id": 27771,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "358:2:22"
+            },
+            "returnParameters": {
+              "id": 27774,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27773,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27775,
+                  "src": "384:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27772,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "384:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "383:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27781,
+            "nodeType": "FunctionDefinition",
+            "src": "458:50:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27776,
+              "nodeType": "StructuredDocumentation",
+              "src": "397:58:22",
+              "text": "@notice The \"risky\" or \"speculative\" token in the pair"
+            },
+            "functionSelector": "d21220a7",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token1",
+            "nameLocation": "467:6:22",
+            "parameters": {
+              "id": 27777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "473:2:22"
+            },
+            "returnParameters": {
+              "id": 27780,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27779,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27781,
+                  "src": "499:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27778,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "499:7:22",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "498:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27787,
+            "nodeType": "FunctionDefinition",
+            "src": "569:55:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27782,
+              "nodeType": "StructuredDocumentation",
+              "src": "512:54:22",
+              "text": "@notice Scale required to make token 0 18 decimals"
+            },
+            "functionSelector": "b8c1a35f",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token0Scale",
+            "nameLocation": "578:11:22",
+            "parameters": {
+              "id": 27783,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "589:2:22"
+            },
+            "returnParameters": {
+              "id": 27786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27785,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27787,
+                  "src": "615:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27784,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "615:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "614:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27793,
+            "nodeType": "FunctionDefinition",
+            "src": "685:55:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27788,
+              "nodeType": "StructuredDocumentation",
+              "src": "628:54:22",
+              "text": "@notice Scale required to make token 1 18 decimals"
+            },
+            "functionSelector": "70f98d84",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "token1Scale",
+            "nameLocation": "694:11:22",
+            "parameters": {
+              "id": 27789,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "705:2:22"
+            },
+            "returnParameters": {
+              "id": 27792,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27791,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27793,
+                  "src": "731:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27790,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "731:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "730:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27799,
+            "nodeType": "FunctionDefinition",
+            "src": "796:54:22",
+            "nodes": [],
+            "documentation": {
+              "id": 27794,
+              "nodeType": "StructuredDocumentation",
+              "src": "744:49:22",
+              "text": "@notice Maximum exchange rate (token0/token1)"
+            },
+            "functionSelector": "b09ad8a0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "upperBound",
+            "nameLocation": "805:10:22",
+            "parameters": {
+              "id": 27795,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "815:2:22"
+            },
+            "returnParameters": {
+              "id": 27798,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27797,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27799,
+                  "src": "841:7:22",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27796,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "841:7:22",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "840:9:22"
+            },
+            "scope": 27800,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IImmutableState",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 27763,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:79:22",
+          "text": "@notice Immutable state interface\n @author Kyle Scott (kyle@numoen.com)"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          27800
+        ],
+        "name": "IImmutableState",
+        "nameLocation": "156:15:22",
+        "scope": 27801,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0-only"
+  },
+  "id": 22
+}

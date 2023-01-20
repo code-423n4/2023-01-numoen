@@ -1,0 +1,937 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint8",
+          "name": "token0Exp",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint8",
+          "name": "token1Exp",
+          "type": "uint8"
+        },
+        {
+          "internalType": "uint256",
+          "name": "upperBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "createLendgine",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token0Exp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "token1Exp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "upperBound",
+          "type": "uint256"
+        }
+      ],
+      "name": "getLendgine",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "lendgine",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "parameters",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "token0",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "token1",
+          "type": "address"
+        },
+        {
+          "internalType": "uint128",
+          "name": "token0Exp",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint128",
+          "name": "token1Exp",
+          "type": "uint128"
+        },
+        {
+          "internalType": "uint256",
+          "name": "upperBound",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "createLendgine(address,address,uint8,uint8,uint256)": "4538d6cb",
+    "getLendgine(address,address,uint256,uint256,uint256)": "8e53b690",
+    "parameters()": "89035730"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint8\",\"name\":\"token0Exp\",\"type\":\"uint8\"},{\"internalType\":\"uint8\",\"name\":\"token1Exp\",\"type\":\"uint8\"},{\"internalType\":\"uint256\",\"name\":\"upperBound\",\"type\":\"uint256\"}],\"name\":\"createLendgine\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"token0Exp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"token1Exp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"upperBound\",\"type\":\"uint256\"}],\"name\":\"getLendgine\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"lendgine\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"parameters\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"token0\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"token1\",\"type\":\"address\"},{\"internalType\":\"uint128\",\"name\":\"token0Exp\",\"type\":\"uint128\"},{\"internalType\":\"uint128\",\"name\":\"token1Exp\",\"type\":\"uint128\"},{\"internalType\":\"uint256\",\"name\":\"upperBound\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Kyle Scott (https://github.com/numoen/contracts-mono/blob/master/src/Factory.sol)Modified from Uniswap (https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol) and Primitive (https://github.com/primitivefinance/rmm-core/blob/main/contracts/PrimitiveFactory.sol)\",\"kind\":\"dev\",\"methods\":{\"getLendgine(address,address,uint256,uint256,uint256)\":{\"details\":\"returns address 0 if it doesn't exist\"},\"parameters()\":{\"details\":\"Called by the immutable state constructor to fetch the parameters of the lendgine\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"createLendgine(address,address,uint8,uint8,uint256)\":{\"notice\":\"Deploys a lendgine contract by transiently setting the parameters storage slots and clearing it after the lendgine has been deployed\"},\"getLendgine(address,address,uint256,uint256,uint256)\":{\"notice\":\"Returns the lendgine address for a given pair of tokens and upper bound\"},\"parameters()\":{\"notice\":\"Get the parameters to be used in constructing the lendgine, set transiently during lendgine creation\"}},\"notice\":\"Manages the recording and creation of Numoen markets\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/core/interfaces/IFactory.sol\":\"IFactory\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\"},\"optimizer\":{\"enabled\":true,\"runs\":10000},\"remappings\":[\":@prb/test/=lib/prb-test/src/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":forge-std/=lib/forge-std/src/\",\":prb-math/=lib/prb-math/contracts/\",\":src/=src/\"]},\"sources\":{\"src/core/interfaces/IFactory.sol\":{\"keccak256\":\"0x85bf8b204426c5aa33f4bec9e7c97b081526fb05ae2770f9745ac6a9e182ea07\",\"license\":\"GPL-3.0-only\",\"urls\":[\"bzz-raw://e8f8a52d255b36c58bde8c97b9bc29237ebd487a2e86b63ea44c295d428c0cff\",\"dweb:/ipfs/QmNcHZPNAvbJynDEyVmSJ55zQ9evyStqWT46XiNLwNmGUL\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint8",
+              "name": "token0Exp",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint8",
+              "name": "token1Exp",
+              "type": "uint8"
+            },
+            {
+              "internalType": "uint256",
+              "name": "upperBound",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "createLendgine",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token0Exp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "token1Exp",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "upperBound",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "getLendgine",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "lendgine",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "parameters",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "token0",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "token1",
+              "type": "address"
+            },
+            {
+              "internalType": "uint128",
+              "name": "token0Exp",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint128",
+              "name": "token1Exp",
+              "type": "uint128"
+            },
+            {
+              "internalType": "uint256",
+              "name": "upperBound",
+              "type": "uint256"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "getLendgine(address,address,uint256,uint256,uint256)": {
+            "details": "returns address 0 if it doesn't exist"
+          },
+          "parameters()": {
+            "details": "Called by the immutable state constructor to fetch the parameters of the lendgine"
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "createLendgine(address,address,uint8,uint8,uint256)": {
+            "notice": "Deploys a lendgine contract by transiently setting the parameters storage slots and clearing it after the lendgine has been deployed"
+          },
+          "getLendgine(address,address,uint256,uint256,uint256)": {
+            "notice": "Returns the lendgine address for a given pair of tokens and upper bound"
+          },
+          "parameters()": {
+            "notice": "Get the parameters to be used in constructing the lendgine, set transiently during lendgine creation"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@prb/test/=lib/prb-test/src/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":forge-std/=lib/forge-std/src/",
+        ":prb-math/=lib/prb-math/contracts/",
+        ":src/=src/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 10000
+      },
+      "metadata": {
+        "bytecodeHash": "none"
+      },
+      "compilationTarget": {
+        "src/core/interfaces/IFactory.sol": "IFactory"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/core/interfaces/IFactory.sol": {
+        "keccak256": "0x85bf8b204426c5aa33f4bec9e7c97b081526fb05ae2770f9745ac6a9e182ea07",
+        "urls": [
+          "bzz-raw://e8f8a52d255b36c58bde8c97b9bc29237ebd487a2e86b63ea44c295d428c0cff",
+          "dweb:/ipfs/QmNcHZPNAvbJynDEyVmSJ55zQ9evyStqWT46XiNLwNmGUL"
+        ],
+        "license": "GPL-3.0-only"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/core/interfaces/IFactory.sol",
+    "id": 27761,
+    "exportedSymbols": {
+      "IFactory": [
+        27760
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "41:1445:21",
+    "nodes": [
+      {
+        "id": 27712,
+        "nodeType": "PragmaDirective",
+        "src": "41:24:21",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".0"
+        ]
+      },
+      {
+        "id": 27760,
+        "nodeType": "ContractDefinition",
+        "src": "446:1039:21",
+        "nodes": [
+          {
+            "id": 27729,
+            "nodeType": "FunctionDefinition",
+            "src": "604:188:21",
+            "nodes": [],
+            "documentation": {
+              "id": 27714,
+              "nodeType": "StructuredDocumentation",
+              "src": "469:132:21",
+              "text": "@notice Returns the lendgine address for a given pair of tokens and upper bound\n @dev returns address 0 if it doesn't exist"
+            },
+            "functionSelector": "8e53b690",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLendgine",
+            "nameLocation": "613:11:21",
+            "parameters": {
+              "id": 27725,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27716,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "638:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "630:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27715,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "630:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27718,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "658:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "650:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27717,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "650:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27720,
+                  "mutability": "mutable",
+                  "name": "token0Exp",
+                  "nameLocation": "678:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "670:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27719,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "670:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27722,
+                  "mutability": "mutable",
+                  "name": "token1Exp",
+                  "nameLocation": "701:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "693:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27721,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "693:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27724,
+                  "mutability": "mutable",
+                  "name": "upperBound",
+                  "nameLocation": "724:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "716:18:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27723,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "716:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "624:114:21"
+            },
+            "returnParameters": {
+              "id": 27728,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27727,
+                  "mutability": "mutable",
+                  "name": "lendgine",
+                  "nameLocation": "782:8:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27729,
+                  "src": "774:16:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27726,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "774:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "773:18:21"
+            },
+            "scope": 27760,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27743,
+            "nodeType": "FunctionDefinition",
+            "src": "1010:147:21",
+            "nodes": [],
+            "documentation": {
+              "id": 27730,
+              "nodeType": "StructuredDocumentation",
+              "src": "796:211:21",
+              "text": "@notice Get the parameters to be used in constructing the lendgine, set\n transiently during lendgine creation\n @dev Called by the immutable state constructor to fetch the parameters of the lendgine"
+            },
+            "functionSelector": "89035730",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "parameters",
+            "nameLocation": "1019:10:21",
+            "parameters": {
+              "id": 27731,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1029:2:21"
+            },
+            "returnParameters": {
+              "id": 27742,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27733,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "1075:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27743,
+                  "src": "1067:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27732,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1067:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27735,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "1091:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27743,
+                  "src": "1083:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27734,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1083:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27737,
+                  "mutability": "mutable",
+                  "name": "token0Exp",
+                  "nameLocation": "1107:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27743,
+                  "src": "1099:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 27736,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1099:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27739,
+                  "mutability": "mutable",
+                  "name": "token1Exp",
+                  "nameLocation": "1126:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27743,
+                  "src": "1118:17:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint128",
+                    "typeString": "uint128"
+                  },
+                  "typeName": {
+                    "id": 27738,
+                    "name": "uint128",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1118:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint128",
+                      "typeString": "uint128"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27741,
+                  "mutability": "mutable",
+                  "name": "upperBound",
+                  "nameLocation": "1145:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27743,
+                  "src": "1137:18:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27740,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1137:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1066:90:21"
+            },
+            "scope": 27760,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 27759,
+            "nodeType": "FunctionDefinition",
+            "src": "1314:169:21",
+            "nodes": [],
+            "documentation": {
+              "id": 27744,
+              "nodeType": "StructuredDocumentation",
+              "src": "1161:150:21",
+              "text": "@notice Deploys a lendgine contract by transiently setting the parameters storage slots\n and clearing it after the lendgine has been deployed"
+            },
+            "functionSelector": "4538d6cb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createLendgine",
+            "nameLocation": "1323:14:21",
+            "parameters": {
+              "id": 27755,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27746,
+                  "mutability": "mutable",
+                  "name": "token0",
+                  "nameLocation": "1351:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1343:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27745,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1343:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27748,
+                  "mutability": "mutable",
+                  "name": "token1",
+                  "nameLocation": "1371:6:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1363:14:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27747,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1363:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27750,
+                  "mutability": "mutable",
+                  "name": "token0Exp",
+                  "nameLocation": "1389:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1383:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 27749,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1383:5:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27752,
+                  "mutability": "mutable",
+                  "name": "token1Exp",
+                  "nameLocation": "1410:9:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1404:15:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint8",
+                    "typeString": "uint8"
+                  },
+                  "typeName": {
+                    "id": 27751,
+                    "name": "uint8",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1404:5:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint8",
+                      "typeString": "uint8"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27754,
+                  "mutability": "mutable",
+                  "name": "upperBound",
+                  "nameLocation": "1433:10:21",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1425:18:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 27753,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1425:7:21",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1337:110:21"
+            },
+            "returnParameters": {
+              "id": 27758,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27757,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 27759,
+                  "src": "1474:7:21",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 27756,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1474:7:21",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1473:9:21"
+            },
+            "scope": 27760,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IFactory",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 27713,
+          "nodeType": "StructuredDocumentation",
+          "src": "67:379:21",
+          "text": "@notice Manages the recording and creation of Numoen markets\n @author Kyle Scott (https://github.com/numoen/contracts-mono/blob/master/src/Factory.sol)\n @author Modified from Uniswap (https://github.com/Uniswap/v2-core/blob/master/contracts/UniswapV2Factory.sol)\n and Primitive (https://github.com/primitivefinance/rmm-core/blob/main/contracts/PrimitiveFactory.sol)"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          27760
+        ],
+        "name": "IFactory",
+        "nameLocation": "456:8:21",
+        "scope": 27761,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0-only"
+  },
+  "id": 21
+}
