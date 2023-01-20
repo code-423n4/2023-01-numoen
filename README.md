@@ -106,8 +106,6 @@ The `LiquidityManager` contract provides some helpers to aid with entering, exit
 ### Lendgine Router
 
 The `LendgineRouter` contract provides help when entering or exiting an option position. Checks for staleness, slippage, handling permit functions, and native tokens are included. This can also perform the leveraging and deleveraging of options positions with the help of external liquidity pools such as UniswapV2 style pools and UniswapV3 style pools. This is somewhat similar to looping through compound while trading the borrowed token for collateral and then borrowing more. `mint` takes the borrowed liquidity and transfers it entirely into token1 for collateral. A borrowed amount can be passed in such that liquidity can be optimistically borrowed for more collateral than the option depositor has at the moment, the underlying liquidity is then swapped entirely for token1 to use as collateral in combination with collateral from the user. `burn` optimistically mints a liquidity position and repays debt, then uses the unlocked collateral to come up with the underlying for the liquidity position that was minted. 
-![image](https://user-images.githubusercontent.com/43524469/213795959-ec3c1652-db07-4ec4-9fe8-a4e46e5ac60b.png)
-
 
 # Scope
 
