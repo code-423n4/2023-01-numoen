@@ -112,3 +112,6 @@ dist
 !.yarn/sdks
 !.yarn/versions
 .pnp.*
+**/cache
+**/node_modules
+**/out
