@@ -8,8 +8,8 @@
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-01-numoen-contest/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts January 24, 2023 20:00 UTC
-- Ends January 30, 2023 20:00 UTC
+- Starts January 26, 2023 20:00 UTC
+- Ends February 1, 2023 20:00 UTC
 
 ## C4udit / Publicly Known Issues
 
