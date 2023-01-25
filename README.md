@@ -64,38 +64,69 @@ The following directories and implementations are considered in-scope for this a
 
 For the Protocol Implementation, here's a brief description of each file.
 
-| Contract              | SLOC | Purpose                                                      | Libraries Used    |
-| --------------------- | ---- | ---------------------------------------------------------    | ----------------- |
-| Pair.sol              | 81   | Implements AMM with Capped Power Invariant                   |      N/A          |
-| Lendgine.sol          | 139  | Lending and borrowing of AMM shares                          |      N/A          |
-| Position.sol          | 50   | Liquidity position handler                                   |      N/A          |
-| PositionMath.sol      | 7    | Math for liquidity positions                                 |      N/A          |
-| ImmutableState.sol    | 19   | Immutables                                                   |      N/A          |
-| Factory.sol           | 40   | Deploys lendgine markets                                     |      N/A          |
-| JumpRate.sol          | 26   | Interest rate curve                                          |      N/A          |
-| Balance.sol           | 8    | Reads token balances                                         |      N/A          |
-| SafeCast.sol          | 7    | Cast Solidity types                                          |      N/A          |
-| LendgineRouter.sol    | 221  | Aids with entry and exit of options positions                |      N/A          |
-| LiquidityManager.sol  | 168  | Aids with entry, exit, and management of liquidity positions |      N/A          |
-| Payment.sol           | 32   | Functions to ease deposit and withdrawal of ETH              |      N/A          |
-| SwapHelper.sol        | 63   | Facilitates swapping on external liquidity sources           |      N/A          |
-| LendgineAddress.sol   | 23   | Computes Numoen Lendgine addresses                           |      N/A          |
-| UniswapV2Library.sol  | 46   | Modified V2 Library for Solidity 0.8                         |      N/A          |
+|File|[SLOC](#nowhere "(nSLOC, SLOC, Lines)")|Description|Libraries|
+|:-|:-:|:-|:-|
+|_Contracts (4)_|
+|[src/core/Factory.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/Factory.sol) [🧮](#nowhere "Uses Hash-Functions")|[50](#nowhere "(nSLOC:40, SLOC:50, Lines:89)")|Deploys lendgine markets||
+|[src/core/Lendgine.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/Lendgine.sol)|[165](#nowhere "(nSLOC:139, SLOC:165, Lines:273)")|Lending and borrowing of AMM shares||
+|[src/periphery/LiquidityManager.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/LiquidityManager.sol) [💰](#nowhere "Payable Functions")|[168](#nowhere "(nSLOC:168, SLOC:168, Lines:251)")|Aids with entry, exit, and management of liquidity positions||
+|[src/periphery/LendgineRouter.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/LendgineRouter.sol) [💰](#nowhere "Payable Functions")|[206](#nowhere "(nSLOC:197, SLOC:206, Lines:287)")|Aids with entry and exit of options positions||
+|_Abstracts (5)_|
+|[src/core/ImmutableState.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/ImmutableState.sol)|[19](#nowhere "(nSLOC:19, SLOC:19, Lines:38)")|Immutables||
+|[src/core/JumpRate.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/JumpRate.sol)|[34](#nowhere "(nSLOC:26, SLOC:34, Lines:44)")|Interest rate curve||
+|[src/periphery/Payment.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/Payment.sol) [💰](#nowhere "Payable Functions")|[42](#nowhere "(nSLOC:42, SLOC:42, Lines:65)")|Functions to ease deposit and withdrawal of ETH||
+|[src/periphery/SwapHelper.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/SwapHelper.sol)|[72](#nowhere "(nSLOC:72, SLOC:72, Lines:120)")|Facilitates swapping on external liquidity sources||
+|[src/core/Pair.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/Pair.sol)|[81](#nowhere "(nSLOC:81, SLOC:81, Lines:140)")|Implements AMM with Capped Power Invariant||
+|_Libraries (6)_|
+|[src/core/libraries/PositionMath.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/libraries/PositionMath.sol)|[10](#nowhere "(nSLOC:10, SLOC:10, Lines:19)")|Math for liquidity positions||
+|[src/libraries/Balance.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/libraries/Balance.sol) [🧮](#nowhere "Uses Hash-Functions")|[10](#nowhere "(nSLOC:10, SLOC:10, Lines:18)")|Reads token balances||
+|[src/libraries/SafeCast.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/libraries/SafeCast.sol)|[10](#nowhere "(nSLOC:10, SLOC:10, Lines:19)")|Cast Solidity types||
+|[src/periphery/libraries/LendgineAddress.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/libraries/LendgineAddress.sol) [🧮](#nowhere "Uses Hash-Functions")|[32](#nowhere "(nSLOC:21, SLOC:32, Lines:36)")|Computes Numoen Lendgine addresses||
+|[src/core/libraries/Position.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/libraries/Position.sol)|[62](#nowhere "(nSLOC:39, SLOC:62, Lines:97)")|Liquidity position handler||
+|[src/periphery/UniswapV2/libraries/UniswapV2Library.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV2/libraries/UniswapV2Library.sol) [🧮](#nowhere "Uses Hash-Functions")|[70](#nowhere "(nSLOC:46, SLOC:70, Lines:84)")|Modified V2 Library for Solidity 0.8||
+|Total (over 15 files):| [1031](#nowhere "(nSLOC:920, SLOC:1031, Lines:1580)") ||
 
 
 ## Out of scope
 
-| Contract              |
-| --------------------- |
-| core/ReentrancyGaurd.sol |
-| core/ERC20.sol |
-| libraries/SafeTransferLib.sol |
-| libraries/FullMath.sol |
-| periphery/Multicall.sol |
-| periphery/SelfPermit.sol |
-| periphery/UniswapV3/PoolAddress.sol |
-| periphery/UniswapV3/TickMath.sol|
-| test/* |
+|File|[SLOC](#nowhere "(nSLOC, SLOC, Lines)")|Description|Libraries|
+|:-|:-:|:-|:-|
+|_Abstracts (4)_|
+|[src/core/ReentrancyGuard.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/ReentrancyGuard.sol)|[10](#nowhere "(nSLOC:10, SLOC:10, Lines:20)")|||
+|[src/periphery/Multicall.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/Multicall.sol) [🖥](#nowhere "Uses Assembly") [💰](#nowhere "Payable Functions") [👥](#nowhere "DelegateCall") [Σ](#nowhere "Unchecked Blocks")|[19](#nowhere "(nSLOC:19, SLOC:19, Lines:29)")|||
+|[src/periphery/SelfPermit.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/SelfPermit.sol) [💰](#nowhere "Payable Functions")|[22](#nowhere "(nSLOC:12, SLOC:22, Lines:44)")|||
+|[src/core/ERC20.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/ERC20.sol) [🧮](#nowhere "Uses Hash-Functions") [🔖](#nowhere "Handles Signatures: ecrecover") [Σ](#nowhere "Unchecked Blocks")|[98](#nowhere "(nSLOC:87, SLOC:98, Lines:190)")|||
+|_Libraries (4)_|
+|[src/periphery/UniswapV3/libraries/TickMath.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/libraries/TickMath.sol)|[7](#nowhere "(nSLOC:7, SLOC:7, Lines:17)")|||
+|[src/periphery/UniswapV3/libraries/PoolAddress.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/libraries/PoolAddress.sol) [🧮](#nowhere "Uses Hash-Functions")|[27](#nowhere "(nSLOC:27, SLOC:27, Lines:43)")|||
+|[src/libraries/FullMath.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/libraries/FullMath.sol) [🖥](#nowhere "Uses Assembly") [Σ](#nowhere "Unchecked Blocks")|[56](#nowhere "(nSLOC:56, SLOC:56, Lines:129)")|||
+|[src/libraries/SafeTransferLib.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/libraries/SafeTransferLib.sol) [🖥](#nowhere "Uses Assembly")|[56](#nowhere "(nSLOC:56, SLOC:56, Lines:116)")|||
+|_Interfaces (24)_|
+|[src/core/interfaces/callback/IPairMintCallback.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/callback/IPairMintCallback.sol)|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:10)")|||
+|[src/core/interfaces/callback/ISwapCallback.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/callback/ISwapCallback.sol)|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:10)")|||
+|[src/periphery/UniswapV3/interfaces/callback/IUniswapV3SwapCallback.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/callback/IUniswapV3SwapCallback.sol)|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:17)")|||
+|[src/periphery/interfaces/IMulticall.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/interfaces/IMulticall.sol) [💰](#nowhere "Payable Functions")|[4](#nowhere "(nSLOC:4, SLOC:4, Lines:13)")|||
+|[src/periphery/interfaces/external/IWETH9.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/interfaces/external/IWETH9.sol) [💰](#nowhere "Payable Functions")|[5](#nowhere "(nSLOC:5, SLOC:5, Lines:11)")|||
+|[src/core/interfaces/IJumpRate.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/IJumpRate.sol)|[8](#nowhere "(nSLOC:8, SLOC:8, Lines:18)")|||
+|[src/core/interfaces/IImmutableState.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/IImmutableState.sol)|[9](#nowhere "(nSLOC:9, SLOC:9, Lines:24)")|||
+|[src/core/interfaces/IPair.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/IPair.sol)|[9](#nowhere "(nSLOC:9, SLOC:9, Lines:26)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolImmutables.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolImmutables.sol)|[9](#nowhere "(nSLOC:9, SLOC:9, Lines:35)")|||
+|[src/core/interfaces/callback/IMintCallback.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/callback/IMintCallback.sol)|[11](#nowhere "(nSLOC:4, SLOC:11, Lines:17)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolOwnerActions.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolOwnerActions.sol)|[11](#nowhere "(nSLOC:5, SLOC:11, Lines:25)")|||
+|[src/periphery/UniswapV2/interfaces/IUniswapV2Factory.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV2/interfaces/IUniswapV2Factory.sol)|[14](#nowhere "(nSLOC:14, SLOC:14, Lines:26)")|||
+|[src/periphery/UniswapV3/interfaces/IUniswapV3Factory.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/IUniswapV3Factory.sol)|[14](#nowhere "(nSLOC:14, SLOC:14, Lines:66)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolDerivedState.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolDerivedState.sol)|[14](#nowhere "(nSLOC:5, SLOC:14, Lines:43)")|||
+|[src/periphery/interfaces/ISelfPermit.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/interfaces/ISelfPermit.sol) [💰](#nowhere "Payable Functions")|[14](#nowhere "(nSLOC:5, SLOC:14, Lines:33)")|||
+|[src/periphery/interfaces/external/IERC20PermitAllowed.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/interfaces/external/IERC20PermitAllowed.sol)|[14](#nowhere "(nSLOC:4, SLOC:14, Lines:28)")|||
+|[src/periphery/UniswapV3/interfaces/IUniswapV3Pool.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/IUniswapV3Pool.sol)|[15](#nowhere "(nSLOC:15, SLOC:15, Lines:22)")|||
+|[src/periphery/interfaces/external/IERC20Permit.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/interfaces/external/IERC20Permit.sol)|[15](#nowhere "(nSLOC:6, SLOC:15, Lines:61)")|||
+|[src/core/interfaces/ILendgine.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/ILendgine.sol)|[20](#nowhere "(nSLOC:20, SLOC:20, Lines:81)")|||
+|[src/core/interfaces/IFactory.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/core/interfaces/IFactory.sol)|[26](#nowhere "(nSLOC:6, SLOC:26, Lines:41)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolActions.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolActions.sol)|[34](#nowhere "(nSLOC:10, SLOC:34, Lines:103)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolEvents.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolEvents.sol)|[44](#nowhere "(nSLOC:44, SLOC:44, Lines:113)")|||
+|[src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolState.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV3/interfaces/pool/IUniswapV3PoolState.sol)|[47](#nowhere "(nSLOC:12, SLOC:47, Lines:118)")|||
+|[src/periphery/UniswapV2/interfaces/IUniswapV2Pair.sol](https://github.com/code-423n4/2023-01-numoen/blob/main/src/periphery/UniswapV2/interfaces/IUniswapV2Pair.sol)|[52](#nowhere "(nSLOC:43, SLOC:52, Lines:82)")|||
+|Total (over 32 files):| [696](#nowhere "(nSLOC:537, SLOC:696, Lines:1611)") ||
 
 
 ## Scoping Details 
@@ -136,3 +167,9 @@ yarn
 Some tests are reliant upon a fork of goerli. Add the goerli RPC to a .env file. See .env.example for an example. To run tests, run:
 
 `forge test --gas-report`
+
+
+## Quickstart command
+
+`export RPC_URL_GOERLI="<your-goerli-rpc-url-goes-here>" && rm -Rf 2023-01-numoen || true && git clone https://github.com/code-423n4/2023-01-numoen.git -j8 --recurse-submodules && cd 2023-01-numoen && echo "RPC_URL_GOERLI=$RPC_URL_GOERLI" > .env && forge install && yarn && forge test --gas-report`
+
