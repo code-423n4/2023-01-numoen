@@ -168,6 +168,15 @@ Some tests are reliant upon a fork of goerli. Add the goerli RPC to a .env file.
 
 `forge test --gas-report`
 
+The following test currently fails and has no workaround:
+
+```
+Encountered 1 failing test in src/core/Lendgine.sol:Lendgine
+[FAIL. Reason: EvmError: Revert] setUp() (gas: 0)
+
+Encountered a total of 1 failing tests, 103 tests succeeded
+```
+
 
 ## Quickstart command
 
