@@ -1,0 +1,770 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2023 / numoen-jan26
+==============================================================
+
+[01/20/2023 14:40] itsmetechjay (pinned)
+👋 Hello and welcome to the contest channel for the $60,500 USDC **Numeon** contest!
+
+📆 Contest opens Thursday, 26 January 2023 20:00 (20:00 UTC) and runs through Wednesday, 01 February 2023 20:00 (20:00 UTC) (6 days).
+
+Please give a warm welcome to the Numoen team, particularly @Kyscott and @rleifke, who will be available for questions either here in the channel or via DM.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this contest, consider enabling notifications for this channel. 🐺 ⏰
+
+Contest Page: https://code4rena.com/contests/2023-01-numoen-contest
+
+{Embed}
+https://code4rena.com/contests/2023-01-numoen-contest
+Code4rena Numoen contest
+$60,500 USDC
+24 January 2023—30 January 2023
+Code4rena - ARCHIVE-Q1-2023 - numoen-jan26 [1066001781181644930].txt_Files/C4-banner-7C19B.png
+
+
+[01/20/2023 14:40] itsmetechjay
+Pinned a message.
+
+
+[01/20/2023 14:43] codingnamekiki
+:pepe_ping:
+
+
+[01/20/2023 16:56] kyscott
+🚀
+
+{Reactions}
+🎉 (2) 
+
+[01/20/2023 17:04] rleifke
+🚀
+
+{Reactions}
+🎉 
+
+[01/20/2023 17:05] rleifke
+Would love to co market with you guys 😊
+
+
+[01/20/2023 17:11] rleifke
+https://twitter.com/numoen/status/1616483276046073860?s=46&t=UI3zXY9qzsLZQxCa93yQ9Q
+
+{Embed}
+Numoen (@numoen)
+https://twitter.com/numoen/status/1616483276046073860?s=46&t=UI3zXY9qzsLZQxCa93yQ9Q
+🚨CALLING ALL HACKERS!!!🚨
+
+We are partnering up with @code4rena to open up an auditing contest of the codebase. The contest will start on January 24th, at 3pm ET. Bounty will be $60,500 USDC 💰💰💰 💰
+
+https://t.co/lgdDXJQM4e
+Twitter
+
+{Reactions}
+hi5 💯 
+
+[01/21/2023 13:53] mahdi9606
+is it a public contest ?
+
+
+[01/21/2023 14:51] kyscott
+yes
+
+
+[01/23/2023 01:48] rleifke
+yessir
+
+
+[01/24/2023 17:10] kartoonjoy (pinned)
+**REMINDER:** Using ChatGPT, GPT-3, or similar tools for contest submissions is prohibited, and will result in all of your contest submissions being ruled invalidated. Additional penalties may also be applied at the discretion of judges and C4 staff.
+
+
+[01/24/2023 17:10] kartoonjoy
+Pinned a message.
+
+
+[01/24/2023 17:53] itsmetechjay
+An update: this contest will start on Thursday, 26 January 2023 20:00.  We will get the website updated shortly.
+
+{Reactions}
+PepeRain C4Keycap 
+
+[01/24/2023 20:04] rleifke
+awesome! we will tweet this
+
+{Reactions}
+hi5 
+
+[01/25/2023 03:17] akshaysrivastav
+Change in schedule just 2 hours before the scheduled time?
+
+
+[01/25/2023 03:37] rleifke
+yes, our fault. We had some small issues with Circle.
+
+{Reactions}
+🆒 hi5 
+
+[01/26/2023 16:46] rleifke
+Contest starting a few hours!! Wahoo 🔥
+
+{Reactions}
+🔥 (6) 🎉 (4) 
+
+[01/26/2023 20:05] rleifke
+Hey everyone, the contest is now live!  Super excited to get this going and feel free to reach to me or @Kyscott with any questions. Just be sure to tag us to get the quickest response. Best of luck 🦾
+
+{Reactions}
+👀 (4) 🔥 (3) 🫡 (2) 
+
+[01/26/2023 20:14] thepicodes (pinned)
+**Automated findings: **https://gist.github.com/Picodes/434ab36ed39d7e09f82f302e25fcc5e4
+
+{Reactions}
+👍🏻 
+
+[01/26/2023 20:17] kartoonjoy (pinned)
+Wardens, please note that the automated findings output has been posted and added to pinned posts. These are considered publicly known issues and are not eligible for awards.
+
+**Automated findings**: 
+https://gist.github.com/Picodes/434ab36ed39d7e09f82f302e25fcc5e4
+
+
+[01/26/2023 20:18] kartoonjoy
+Pinned a message.
+
+
+[01/26/2023 20:18] kartoonjoy
+Pinned a message.
+
+
+[01/26/2023 20:20] pimhakkert
+Good luck everyone. Until when is this contest open?
+
+
+[01/26/2023 20:21] codingnamekiki
+1st February
+
+{Reactions}
+🙏🏼 (2) 
+
+[01/26/2023 20:21] codingnamekiki
+:pepesleep:
+
+
+[01/26/2023 20:31] kartoonjoy
+Hi there! Just an FYI.....we post contest details at the top of the channel (and we try to pin it too). You can check dates as well as sponsors who will be available for questions.
+
+https://discord.com/channels/810916927919620096/1066001781181644930/1066004202071007242
+
+{Reactions}
+❤️ 🫡 
+
+[01/26/2023 20:35] rleifke
+Wow that was fast. Will take a look right now
+
+{Reactions}
+🤩 
+
+[01/26/2023 22:48] w0rr1or
+Hi @Kyscott can I DM I have a few questions to ask
+
+{Reactions}
+👍 (2) 
+
+[01/27/2023 01:57] rleifke
+go for it
+
+
+[01/27/2023 19:06] kyscott
+Hello I wrote most of the codebase being audited so please reach out directly to me with questions through dm
+
+{Reactions}
+👍 (7) 
+
+[01/27/2023 20:32] chaduke3730
+The table says 15 files are in scope, but the summary says 31.
+
+
+[01/27/2023 20:34] chaduke3730
+@Kyscottwill do.
+
+
+[01/28/2023 13:06] txt_malw4323
+Someone wants to collab? DM me please
+
+
+[01/30/2023 17:20] jm217
+🥴
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - numoen-jan26 [1066001781181644930].txt_Files/screenshot_01-F2565.png
+
+
+[01/30/2023 17:23] jm217
+IMHO Numoen option is more complicated to understand  than normal options
+
+
+[01/30/2023 17:54] rleifke
+Yeah power perps are definitely a complicated instrument. But best way to think about it is as a convex future. Constant gamma as everything is squared.
+
+
+[01/30/2023 18:10] jm217
+Do you have a more detailed whitepaper? The one I found has only 6 pages and seemingly too  abstract
+
+{Reactions}
+👆 
+
+[01/30/2023 22:17] rleifke
+We are currently rewriting! But at the moment, the best resource we have is in the code4rena docs.
+
+
+[01/31/2023 03:00] hansfriese
+@rleifke DMed
+
+{Reactions}
+👍 
+
+[01/31/2023 13:05] 0x5rings
+@Kyscott  DM'd
+
+{Reactions}
+👍 (2) 
+
+[01/31/2023 14:05] 3dgeville#0311
+@Kyscott sendt a DM 😄
+
+{Reactions}
+👍 (2) 
+
+[01/31/2023 16:51] 0kage
+@Kyscott DM'd
+
+{Reactions}
+👍 (2) 
+
+[01/31/2023 17:59] 3dgeville#0311
+@rleifke sendt a DM 😄
+
+{Reactions}
+👍 
+
+[01/31/2023 18:12] rleifke
+Hey everyone! Hope bug hunting is going well. Could you send over your DMs to Kyscott#6491.
+
+
+[01/31/2023 18:13] hansfriese
+@Kyscott Please check DM
+
+{Reactions}
+👍 
+
+[01/31/2023 18:50] hansfriese
+@rleifke @Kyscott please leave your work hours here, I have several questions and it's difficult to get answers.
+
+
+[01/31/2023 18:54] hansfriese
+@Jay | C4 I think it would be helpful to include the best time to ask the sponsor team in the contest info.
+
+{Reactions}
+👍 (3) 👆 
+
+[01/31/2023 19:09] rleifke
+Sorry about that, we're free from now to 4am ET. So for the next 14 hours or so.
+
+{Reactions}
+👍 (2) 
+
+[01/31/2023 21:20] allarious
+@Kyscott DMed, thanks 😁
+
+
+[02/01/2023 19:45] allarious
+Thank you guys @Kyscott @rleifke, Good luck :hi5:
+
+
+[02/01/2023 19:54] rleifke
+Thank you!!
+
+
+[02/01/2023 20:02] C4
+**🚨 CONTEST ALERT**
+
+@🐺wardens The **Numoen** contest is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the contest is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a gardener if you have questions along the way!
+
+{Reactions}
+4739_Skeletor (13) 
+
+[02/01/2023 20:04] praise95
+hello everyone, i just want to ask a question. when 3 different critical functions make an external call to a faulty function which compromises them, will reporting them differently be marked as a duplicate?
+
+
+[02/01/2023 20:04] munakhan12#8137
+Thank you so much guys
+
+{Reactions}
+🫡 (4) ❤️ 
+
+[02/01/2023 20:10] chaduke3730
+@praiseOne I think (one vulnerablity)
+
+{Reactions}
+hi5 
+
+[02/01/2023 20:10] chaduke3730
+since the faulty function is the root cause
+
+
+[02/01/2023 20:11] chaduke3730
+You can report all together to show the depth/width (impact) of the vulnerability to justify the severity you rate
+
+
+[02/01/2023 20:12] chaduke3730
+(say H/M)
+
+
+[02/01/2023 20:14] 0kage
+Complex protocol to understand. Well written @rleifke .. good luck 👍
+
+
+[02/01/2023 20:36] rleifke
+thank you! it's all @Kyscott
+
+
+[02/01/2023 21:20] praise95
+okay, thank you
+
+
+[02/02/2023 06:20] chaduke3730
+I have worked hard on this one
+
+{Reactions}
+👍 (5) cheers_badger (3) 🙌 (3) 
+
+[02/02/2023 06:20] chaduke3730
+hope good result
+
+
+[02/24/2023 04:56] ahmet5611
+https://github.com/code-423n4/code423n4.com/pull/7754/commits/6e2a4847e21b68e6a7b962b9deb351fb5baebe9c
+
+{Embed}
+https://github.com/code-423n4/code423n4.com/pull/7754/commits/6e2a4847e21b68e6a7b962b9deb351fb5baebe9c
+Update Leaderboard Feb23 by liveactionllama · Pull Request #7754 · ...
+Code4rena - ARCHIVE-Q1-2023 - numoen-jan26 [1066001781181644930].txt_Files/98446738-1A1F9
+
+{Reactions}
+👍 (3) hi5 
+
+[02/24/2023 11:05] ladboy233
+:chefskiss:
+
+
+[02/24/2023 11:38] un_for_given
+(draft)
+25278.25 >> hansfriese
+5284.65 >> Allarious
+2378.09 >> ladboy233
+1960.28 >> peakbolt
+1874.73 >> nadin
+1829.3 >> Breeje
+1631 >> rvierdiiev
+1548.21 >> IllIllI
+1296.25 >> CodingNameKiki
+1042.54 >> 0xSmartContract
+997.11 >> btk
+738.88 >> RaymondFam
+716.42 >> NoamYakov
+578.85 >> Deivitto
+551.1 >> c3phas
+548.79 >> adeolu
+533.42 >> 0xhacksmithh
+187.91 >> matrix_0wl
+187.91 >> Rolezn
+142.48 >> chrisdior4
+
+{Reactions}
+🔥 (10) 
+
+[02/24/2023 11:39] peakbolt
+wow @hansfriese is on fire 🔥
+
+
+[02/24/2023 11:39] peakbolt
+🫡
+
+{Reactions}
+🙌 (2) 
+
+[02/24/2023 11:42] ladboy233
+wow this draft calc is cool
+
+{Reactions}
+👍 (3) 
+
+[02/24/2023 11:42] ladboy233
+yes he truly is. @hansfriese
+
+{Reactions}
+🙌 
+
+[02/24/2023 11:42] ladboy233
+:chefskiss: :hi5:
+
+
+[02/24/2023 11:42] ladboy233
+👍
+
+
+[02/24/2023 12:53] adeolu
+First contest 😀😀
+
+{Reactions}
+hi5 (3) 
+
+[02/24/2023 12:59] 0xhacksmithh
+Woww
+
+
+[02/24/2023 17:20] liveactionllamac4
+:C4Keycap:  💸 🎉 Awards for **Numoen**:
+
+$25,278.26 USDC » @hansfriese 
+$5,284.65 USDC » @Allarious 
+$2,378.09 USDC » @0xladboy | Sparkware 
+$1,960.28 USDC » @peakbolt 
+$1,874.73 USDC » @nadin 
+$1,829.30 USDC » @Breeje 
+$1,631.01 USDC » @rvierdiiev 
+$1,548.21 USDC » @IllIllI 
+$1,296.25 USDC » @Kiki 
+$1,042.54 USDC » @0xSmartContract 
+$997.11 USDC » @btk 
+$738.88 USDC » @RaymondFam 
+$716.42 USDC » @Noam Yakov 
+$578.85 USDC » @Deivitto 
+$551.10 USDC » @c3phas 
+$548.79 USDC » @adeolu 
+$533.42 USDC » @0xhacksmithh 
+$187.91 USDC » @Rolezn 
+$187.91 USDC » @matrix_0wl 
+$142.48 USDC » @chrisdior4 
+$142.48 USDC » @0xAgro 
+$142.48 USDC » SleepingBugs (@Deivitto & @0xLovesleep)
+$45.43 USDC » @arialblack14 
+$45.43 USDC » @thinklab 
+$45.43 USDC » @ReyAdmirado 
+$45.43 USDC » @0xackerman 
+$45.43 USDC » @antonttc 
+$45.43 USDC » @Rageur 
+$45.43 USDC » @Diana 
+$45.43 USDC » @cryptostellar5  
+$45.43 USDC » @code-cipher
+
+🏁 Findings summary
+---------------------------
+High risk findings: 1 total, 1 unique
+Med risk findings: 15 total, 6 unique
+Gas reports: 18 total
+QA reports: 9 total
+
+Awards will be distributed on Polygon within the next week. Congratulations, everyone! 💸 💸 💸
+
+If you participated in this contest and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.
+
+{Reactions}
+🙏🏼 (4) 🙏 
+
+[02/24/2023 17:44] ladboy233
+accurate
+
+
+[02/24/2023 17:44] ladboy233
+:chefskiss:
+
+
+[02/24/2023 17:45] un_for_given
+accurate
+
+{Reactions}
+hi5 
+
+[02/25/2023 07:58] 0xpathfindr
+🔥
+
+
+[02/26/2023 13:35] jpr15
+those are the completely reward? or still can be more after published report? i am sure that at least one of my errors submitted is correct
+
+
+[02/26/2023 14:02] codingnamekiki
+This are the final results, the rewards were already sent as well.
+
+
+[02/26/2023 14:04] jpr15
+ok
+
+
+[02/28/2023 01:09] mlome
+I haven't got any reward for my gas report, how is it possible?
+
+
+[02/28/2023 07:45] devabdee
+You probably submitted the already-known findings (automated ones) or there were other better Gas reports submissions than yours.
+Don't worry mate. Learn and hunt HMs 🤙
+
+
+[03/05/2023 19:37] allarious
+@Bernd I sent you a friend request, had some questions regarding the judging
+
+
+[03/06/2023 20:01] allarious
+Can someone help me understand the only High severity bug found in the contest? I don’t feel like I am understanding it correctly.
+According to my understanding the issue is happening because of the rounding down in the code below:
+
+```
+uint256 scale0 = FullMath.mulDiv(amount0, 1e18, liquidity) * token0Scale;
+uint256 scale1 = FullMath.mulDiv(amount1, 1e18, liquidity) * token1Scale;
+```
+
+Where liquidity has high decimal value (10e24) and amount0 has low value (10e6), and it might cause the scale0 to round down. 
+In my opinion seeing the round down is an interesting catch, however, does not effect the system to a great extent. You can see the invariant as expected by the documentation below, and the current one which is claimed to be buggy. The step shapes are because of the rounding down, as x and y axis do not move smoothly:
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - numoen-jan26 [1066001781181644930].txt_Files/Screenshot_2023-03-06_at_12.44.35-0C24A.png
+
+
+[03/06/2023 20:02] allarious
+Here, you can see that the invariant is different that what is expected, because rounding down happens. The steps are exaggerated for the explanation sake. That is why the PoC can actually show than the invariant is not changing, because it can move on the step by changing either only token0 or token1 and still end up on the curve.
+
+*Now what happens?* `uint256 scale0 = FullMath.mulDiv(amount0, 1e18, liquidity) * token0Scale;` still has decimals equal to the number of amount0, and is not threatened by any danger. Even if amount0's decimals is only 10e6, it is still keeping decimal counts for 10e6, which is accepted as is being used by ERC20 tokens.
+
+*How is PoC showing a theft of funds?* It shouldn’t really be theft of funds, its basically a value that someone else left on the table and an external entity is trying to snatch it by an arbitrage. Now as it happens, the value is super small that even 6 decimal points on USDC is not capturing it. As the PoC shows, it can only take 0.5 USDC in an extreme condition where almost most of the pool is consisting of the other token.
+
+Therefore, as I am understanding it, **it is just squeezing an opportunity that someone else left on the table**, that is basically **arbitrage**, and should not be a bug in the system.
+
+The only thing I am understanding here, is to move token0Scale into the mulDiv, which helps with the calculation. However, I do think it is ok to calculate amount0 with 6 decimal point if USDC itself is keeping acount with 6 decimal points.
+
+{Reactions}
+👍 (5) 
+
+[03/06/2023 20:54] allarious
+To be clear, the judge did a great job judging and the warden wrote a great report!
+Just want to get to the bottom of this and possibly learn. 😁
+
+
+[03/06/2023 22:17] 0xl3xx
+Isn't arbitrage when someone is profiting because of differing prices between 2 markets? This is not the case here - the  amount left is caused by the system. Because of a loss of precision  (division followed by multiplication).
+
+{Reactions}
+👍 
+
+[03/06/2023 22:25] allarious
+Arbitrage is taking advantage of a price difference between markets, and in this case anyone can take an amount of token0 or token1 for free from this market via the `swap` interface.
+The `swap` function is the intended interface for the swapping of tokens. It is an interface that allows the market to report the right price while arbitrageurs are active.
+Now if someone leaves an extra amount inside the market, someone else can just come and take the tokens for free by calling `swap`. The loss of precision in this case does not cause any issues, it just defines a certain threshold that should be satisfied by token's reserves.
+Amount is not left by the system, the system does not move funds around, the arbitrageurs do, if someone else is trying to interact with a system and leaves it in a bad state, then its normal that another entity can come in and take that amount. I believe this is the case here.
+
+
+[03/06/2023 22:32] allarious
+Imagine if token1 fixed on reserve1, and the least amount that can satisfy the invariant for token0 is reserve0.
+If I leave the system where we have reserve1 of token1 and (reserve0 + x) of token0. While in invariant is still true with reserve1 and (reserve0 + x), someone else can come in and take x amount of token0 and the invariant will still be true with reserve1 and reserve0 amounts.
+
+Now why the system ended up with (reserve0 + x)? it is because the last person when interacted with the system, did not squeeze the invariant enough, and left x amount in the pool. This, to my understanding, can not be a bug in the system and can happen in any market that does not automatically correct the invariant.
+
+
+[03/06/2023 22:59] peakbolt
+Didn't look into this in depth. But my gut feel is that a good system should be designed not to let X amount to be left in the pool. It's like a DEX should not allow users be frontrunned that's why they have slippage. I think it'd not a bug  only if the user intention is to leave the extra X amount in the pool.
+
+
+[03/06/2023 23:11] allarious
+Here all of the green dots are valid according to invariant, but only the red dots are completely squeezed. If the system is in any of those green dots, anyone can interact with the system to transfer the invariant to one of the red dots while gaining some free tokens. This by itself isn't a bug, just something that happens when someone else leaves money in the pool and invariant in one of the green dots.
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2023 - numoen-jan26 [1066001781181644930].txt_Files/Screenshot_2023-03-06_at_16.08.36-7294E.png
+
+{Reactions}
+👏 
+
+[03/07/2023 02:26] ak19966
+as far as i know from Alex judging, these kind of issues are QA.. not sure how comes this one as high
+
+{Reactions}
+👍 👎 
+
+[03/07/2023 03:16] hansfriese
+The point is if the user intended to leave some for arbitragers or not. That's where the system level protection is necessary.
+
+
+[03/07/2023 03:18] hansfriese
+Two issues that mentioned the same point were downgraded to QA by the judge. There has been a discussion in post QA thread.
+
+
+[03/07/2023 03:21] hansfriese
+> Now as it happens, the value is super small that even 6 decimal points on USDC is not capturing it. As the PoC shows, it can only take 0.5 USDC in an extreme condition where almost most of the pool is consisting of the other token.
+I agree the amount is small, but it's when we assume USDC. I believe we should concentrate on the leak of value. Who knows? I might create a token where 0.5token values 1M USD 😆
+
+
+[03/07/2023 03:36] allarious
+I argue that there is actually no leak of value, and everything is working ok.
+The only thing that is happening is that we are moving from one of the green points closer to one of the red points, while we stay on the invariant threshold line. Once your pool's state is in one of the red dots, there is no more such thing as "leakage".
+Basically users of the system will be jumping from one red dot to another, instead of landing on green ones. I could transfer 10e40 token0 to the pool and the invariant still stays valid, someone else can come and take all those 10e40 tokens but this is not a bug in the system. System does not need to provide protection against these kinds of things, and it is user's responsibility to understand that. If users do not care about the small amount, they might take an slightly less favorable trade.
+
+This isn't an odd case, this happens in all of the curves simulated by solidity, since we don't have infinite amount of decimal values, we can not make the plots accurately and there is always some wiggle room for the numerator and the denominator.
+
+
+[03/07/2023 03:37] hansfriese
+You are right. The point is the protocol moved from a green point to another green point with the transaction. That is what I meant by "leak"
+
+{Reactions}
+👍 
+
+[03/07/2023 03:38] hansfriese
+I mean, the invariant started from zero and it still is zero after the transaction
+
+
+[03/07/2023 03:38] allarious
+For all the points on the plot line, the invariant stays zero
+
+
+[03/07/2023 03:40] hansfriese
+ah wait, I confused. So a red point where the invariant is zero I mean. With the previous implementation, it is possible the system moves from a red point to a red point while an actor pulls value from the protocol.
+
+
+[03/07/2023 03:41] hansfriese
+Basically my point is as long as the invariant is zero, no value should be withdrawable by external actors.
+
+
+[03/07/2023 03:45] allarious
+Invariant is all the available states which a+b >= c+d, all of those states are valid. However, the most favorable states are where a+b == c+d, and among those, red dots are even more favorable by users.
+
+It is not possible to move from one red point to another by only pulling value. You can only move from green points to red ones by pulling value.
+
+
+[03/07/2023 03:46] hansfriese
+<It is not possible to move from one red point to another by only pulling value. You can only move from green points to red ones by pulling value.> - yes this is what the system is supposed to keep. glad we agree on that 🙂
+
+
+[03/07/2023 03:47] allarious
+Let me illustrate it 😅
+
+
+[03/07/2023 03:47] allarious
+And I'll send a picture for you to see
+
+
+[03/07/2023 03:48] hansfriese
+I would love to move to DM with respect to a judge
+
+
+[03/07/2023 03:48] allarious
+All the red points have different x and y s, the thing that you are stating is that there are two red points with either same x or same y. Which does not hold in the system
+
+{Reactions}
+💯 (2) 
+
+[03/07/2023 03:48] hansfriese
+exactly
+
+
+[03/07/2023 03:48] allarious
+Meaning that you can not move from one red point to another by just pulling
+
+
+[03/07/2023 03:48] allarious
+you have to push some amount of the other value
+
+
+[03/07/2023 03:48] hansfriese
+you drew it as a solid line but it had <width> i mean
+
+{Reactions}
+👍 
+
+[03/07/2023 03:49] allarious
+Sure!
+
+
+[03/07/2023 04:10] hansfriese
+I am glad with the discussion with @Allarious! 💯 
+Happy to answer additional questions in DM.
+
+{Reactions}
+👍 
+
+[03/07/2023 04:12] allarious
+Likewise 😁 Pleasure chatting with you!
+
+
+[03/07/2023 13:08] ak19966
+I think.. medium could be reasonable imo..anyway.. it's judge responsible to fix it..
+
+
+[03/07/2023 14:19] hansfriese
+@ak1 While we can put our own opinions freely, it is not proper to evaluate the severity or validity after judging is finished I believe. Feel free to DM me for any questions you have. I can answer not limited to my findings.
+
+
+[03/07/2023 14:22] hansfriese
+For your information, @Allarious and I had a good discussion and we agreed on the key point of the finding. And again, there was a good discussion in Post QA period as well on this specific issue.
+
+{Reactions}
+🤝 (3) 👍 
+
+[03/07/2023 14:29] bernd_42
+I'd like to add my side as a judge of this contest to this discussion: 
+
+First of all, thanks a lot @Allarious for pointing this out and spending a considerable amount of time on explaining your thoughts!
+
+It was indeed a tough decision to ultimately settle with High severity. There were many factors that led me to believe that this was the appropriate decision: 
+
+1. The division before multiplication leads to precision loss and allows anyone to step in and swap the tokens without affecting the invariant. Those funds belong to the pool and should not be able to be swept
+2. The Numoen protocol is permissionless and allows the creation of pairs of any tokens. As @hansfriese pointed out, USDC has been used to showcase the issue, but any other low-decimal token is affected as well and might have a significantly higher monetary value
+3. The finding was well demonstrated by the warden and convinced both the sponsor and myself to be worth the High severity classification
+
+That being said, I acknowledge that Medium severity could have also been a valid choice for this finding. Nevertheless, wardens are always invited to express their thoughts/feedback/criticism in the post-judging QA phase, and in this specific case, no objections were filed for this very submission. 
+
+As I'm in the same boat as you all, and I'm a warden as well, I know that sometimes there are decisions made not in your favor. However, I strive to step up my judging skills in every contest and will certainly reconsider my judging criteria and process (ofc, based on the C4 criteria)
+
+{Reactions}
+👍 (8) 👏 (5) ✅ (2) 
+
+[03/07/2023 14:46] ak19966
+The fact is.. when we report the similiar issue which would fetch hardly few dollars but when the same issue is fetching in thousands of dollars for other cases.. it's really something need to be improved on
+
+
+[03/07/2023 14:49] bernd_42
+"Hardly a few dollars" is subjective and dependent on the underlying token
+
+
+[03/07/2023 14:55] ak19966
+Could be..
+
+
+[03/07/2023 15:53] allarious
+While we could discuss the points you mentioned for hours, I don't think it would benefit anyone further than this!
+
+I wanna thank you for saying that this issue could have been of lower severity. I know its tough to do judging of so many issues at once, making a mistake in severity is only inevitable.
+
+I'm happy because I believe as auditors we shouldn't make the users of the system believe their system has a bug while it doesn't. I wanna congratulate @Kyscott for writing such a great codebase 😁
+
+{Reactions}
+👍 (2) 
+
+[03/07/2023 16:00] cloudellie
+@Allarious @Bernd @hansfriese Thank you all for modelling some really outstanding, thoughtful discussion here. One of the things I love most about this community is its commitment to digging into disagreements respectfully, with a focus on facts and reaching genuine understanding. 
+
+Really appreciate you all. You help make Code4rena better, maybe more than you know. 💜
+
+{Reactions}
+👍 (4) 💜 
+
+[03/07/2023 16:09] 0xarnie
+Another point id like to address while we’re all here. I feel as though wardens who have high previous success and are known can sway judges more effectively than let’s say a person who is reporting the same issue but it’s his first contest. The bias may not even be intentional in nature, but more a subconscious thought and sometimes you feel as though a warden who has got the top spot multiple times may have a stronger case since he has a record of high performance. Don’t know how judging is exactly performed but would be a good addition in my opinion, for the judges to judge the findings without knowing who submitted said issue. Would make a bias, even a subconscious one that you are not aware of, not a thing. Not saying this is the case here but I’d think it could be a possibility in other competitions
+
+{Reactions}
+👍 (19) 
+
+==============================================================
+Exported 126 message(s)
+==============================================================
